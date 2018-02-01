@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yhq.ssmdemo.web.dao.PersonMapper">
+  <resultMap id="BaseResultMap" type="com.yhq.ssmdemo.web.pojo.Person">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="TINYINT" property="sex" />
+    <result column="occupation" jdbcType="INTEGER" property="occupation" />
+    <result column="education" jdbcType="INTEGER" property="education" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="adress" jdbcType="VARCHAR" property="adress" />
+    <result column="town" jdbcType="VARCHAR" property="town" />
+    <result column="village" jdbcType="VARCHAR" property="village" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="district" jdbcType="VARCHAR" property="district" />
+    <result column="thread" jdbcType="VARCHAR" property="thread" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="hash_code" jdbcType="INTEGER" property="hashCode" />
+  </resultMap>
+</mapper>
