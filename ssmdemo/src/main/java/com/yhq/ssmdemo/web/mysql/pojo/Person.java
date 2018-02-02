@@ -1,9 +1,11 @@
-package com.yhq.ssmdemo.web.pojo;
+package com.yhq.ssmdemo.web.mysql.pojo;
 
 import java.util.Date;
-import javax.persistence.*;
 
-import net.minidev.json.JSONValue;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 public class Person {
 	/**
@@ -394,8 +396,8 @@ public class Person {
 		this.hashCode = hashCode;
 	}
 
-	@Override
-	public String toString() {
-		return JSONValue.toJSONString(this);
-	}
+//	@Override
+//	public String toString() {
+//		return JSONValue.toJSONString(this);
+//	}
 }

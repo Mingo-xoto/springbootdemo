@@ -39,7 +39,7 @@
 		</javaClientGenerator>
 
 		<!-- 要生成的那些表 -->
-		<table tableName="person" domainObjectName="Person">
+		<table tableName="tree" domainObjectName="Tree">
 			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
 		</table>
 	</context>

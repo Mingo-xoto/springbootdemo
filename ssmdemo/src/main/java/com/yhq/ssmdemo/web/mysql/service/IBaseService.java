@@ -1,4 +1,4 @@
-package com.yhq.ssmdemo.web.service;
+package com.yhq.ssmdemo.web.mysql.service;
 
 public interface IBaseService<PK, T> {
 	public int deleteByPrimaryKey(PK id);

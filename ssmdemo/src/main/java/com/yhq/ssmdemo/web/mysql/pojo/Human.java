@@ -1,4 +1,4 @@
-package com.yhq.ssmdemo.web.pojo;
+package com.yhq.ssmdemo.web.mysql.pojo;
 
 import java.util.Date;
 
@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import net.minidev.json.JSONValue;
 
 public class Human {
 	/**
@@ -323,8 +322,4 @@ public class Human {
 		this.district = district;
 	}
 
-	@Override
-	public String toString() {
-		return JSONValue.toJSONString(this);
-	}
 }

@@ -1,20 +1,12 @@
 /**
  * 
  */
-package com.yhq.ssmdemo.web.service.impl;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.yhq.ssmdemo.web.mysql.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.yhq.ssmdemo.test.A;
-import com.yhq.ssmdemo.test.B;
-import com.yhq.ssmdemo.test.User;
-import com.yhq.ssmdemo.web.service.IBaseService;
-
-import tk.mybatis.mapper.common.Mapper;
+import com.yhq.ssmdemo.web.mysql.MySqlMapper;
+import com.yhq.ssmdemo.web.mysql.service.IBaseService;
 
 /**
  * 基础服务接口实现
@@ -27,13 +19,11 @@ import tk.mybatis.mapper.common.Mapper;
 public abstract class BaseService<PK, T> implements IBaseService<PK, T> {
 
 	@Autowired
-	protected Mapper<T> baseMapper;
-
-	protected A<T> a;
+	private MySqlMapper<T> baseMapper;
 
 	public int deleteByPrimaryKey(PK id) {
 		// TODO Auto-generated method stub
-		return baseMapper.deleteByPrimaryKey(id);
+		return baseMapper.deleteByPrimaryKey(1L);
 	}
 
 	public int insert(T record) {
@@ -47,21 +37,7 @@ public abstract class BaseService<PK, T> implements IBaseService<PK, T> {
 	}
 
 	public T selectByPrimaryKey(PK id) {
-		B b = new B();
-		Class<?> cl = b.getClass();
-		try {
-			a = (A<T>) cl.newInstance();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		User u = (User) a.get();
-		System.out.println(u.getName());
-		T t =  baseMapper.selectByPrimaryKey(id);
-		return t;
+		return baseMapper.selectByPrimaryKey(id);
 	}
 
 	public int updateByPrimaryKeySelective(T record) {
