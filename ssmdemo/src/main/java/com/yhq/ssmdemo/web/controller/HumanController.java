@@ -21,12 +21,6 @@ public class HumanController {
 	@Autowired
 	private ITreeService treeService;
 
-	/**
-	 * 这种注入会导致调用selectByPrimaryKey方法后进行Person对象实体的转换报异常：java.lang.
-	 * ClassCastException: com.yhq.ssmdemo.web.pojo.Person cannot be cast to
-	 * com.yhq.ssmdemo.web.pojo.Person
-	 * 具体原因未明，只知道多调用了一次Method类invoke()方法将本来已经是Person类型的返回结果进行了一次Cast
-	 */
 	@Autowired
 	private IPersonService personService;
 
